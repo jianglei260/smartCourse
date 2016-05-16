@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="depart_native">
+        <item>成教院</item>
+        <item>大气科学学院</item>
+        <item>电子工程学院</item>
+        <item>公选</item>
+        <item>光电技术学院</item>
+        <item>计算机学院</item>
+        <item>控制工程学院</item>
+        <item>软件工程学院</item>
+        <item>数学学院</item>
+        <item>通信工程学院</item>
+        <item>外国语学院</item>
+        <item>文化艺术学院</item>
+        <item>信息安全工程学院</item>
+        <item>研究生</item>
+        <item>资源环境学院</item>
+    </string-array>
+    <string-array name="depart">
+        <item>公选</item>
+        <item>管理学院</item>
+        <item>商学院</item>
+        <item>统计学院</item>
+        <item>外国语学院</item>
+        <item>文化艺术学院</item>
+        <item>物流学院</item>
+        <item>研究生</item>
+    </string-array>
+    <string-array name="area">
+        <item>本部</item>
+        <item>龙泉校区</item>
+    </string-array>
+    <string-array name="grade">
+        <item>2009级</item>
+        <item>2010级</item>
+        <item>2011级</item>
+        <item>2012级</item>
+        <item>2013级</item>
+        <item>2014级</item>
+        <item>2015级</item>
+        <item>2016级</item>
+    </string-array>
+    <string-array name="mclass">
+        <item>01班</item>
+        <item>02班</item>
+        <item>03班</item>
+        <item>04班</item>
+        <item>05班</item>
+        <item>06班</item>
+        <item>07班</item>
+        <item>08班</item>
+        <item>09班</item>
+        <item>10班</item>
+        <item>11班</item>
+        <item>12班</item>
+    </string-array>
+
+</resources>

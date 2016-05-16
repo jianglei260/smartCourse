@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@drawable/week_bg"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/week_course_1"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_2"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_3"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_4"
+            layout="@layout/weekcourseitem" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/week_course_5"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_6"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_7"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_8"
+            layout="@layout/weekcourseitem" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/week_course_9"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_10"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_11"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_12"
+            layout="@layout/weekcourseitem" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/week_course_13"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_14"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_15"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_16"
+            layout="@layout/weekcourseitem" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="400dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <View
+        android:layout_width="5dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/blue" />
+
+    <LinearLayout
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="vertical" >
+
+        <include
+            android:id="@+id/week_course_17"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_18"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_19"
+            layout="@layout/weekcourseitem" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="25dp"
+            android:background="@color/blue" />
+
+        <include
+            android:id="@+id/week_course_20"
+            layout="@layout/weekcourseitem" />
+    </LinearLayout>
+
+</LinearLayout>

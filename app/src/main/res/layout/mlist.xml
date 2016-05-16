@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@drawable/textstyle"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp" >
+
+    <TextView
+        android:id="@+id/nameItem"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="2dp"
+        android:text="课程" />
+
+    <TextView
+        android:id="@+id/teacherItem"
+       android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="2dp"
+        android:text="老师" />
+
+    <TextView
+        android:id="@+id/timeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="2dp"
+        android:text="时间"  />
+
+    <TextView
+        android:id="@+id/classItem"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="2dp"
+        android:text="教室" />
+
+</LinearLayout>

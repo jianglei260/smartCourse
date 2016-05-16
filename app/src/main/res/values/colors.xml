@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="background">#e9e9e9</color>
+    <color name="textColor">#979797</color>
+    <color name="blue">#18B4EC</color>
+    <color name="white">#ffffff</color>
+    <color name="half_white">#88ffffff</color>
+    <color name="transparent">#00000000</color>
+     <color name="half_transparent">#22000000</color>
+    <color name="half_blue">#B7DBFC</color>
+
+</resources>

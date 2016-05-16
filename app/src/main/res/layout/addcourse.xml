@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/week_bg"
+    android:orientation="vertical">
+
+    <com.smartcourse.view.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_add_title"></com.smartcourse.view.TitleBarView>
+
+    <Spinner
+        android:id="@+id/area"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itemselected"
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/depart"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itemselected"
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/pro"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itemselected"
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/grade"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itemselected"
+        android:gravity="center" />
+
+    <Spinner
+        android:id="@+id/myclass"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itemselected"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/itemselected"
+        android:gravity="center"
+        android:text="查询" />
+
+</LinearLayout>

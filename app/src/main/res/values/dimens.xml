@@ -1,0 +1,15 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="today_list_item_top_margin">10dp</dimen>
+    <dimen name="today_list_top_margin">10dp</dimen>
+    <dimen name="title_bar_height">52dp</dimen>
+    <dimen name="style_spinner_heght">43dp</dimen>
+    <dimen name="week_view_toip_margin">5dp</dimen>
+    <dimen name="style_button_widght">30dp</dimen>
+    <dimen name="style_button_height">100dp</dimen>
+    <dimen name="user_list_height">400dp</dimen>
+</resources>
