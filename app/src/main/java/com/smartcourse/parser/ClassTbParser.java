@@ -55,7 +55,6 @@ public class ClassTbParser {
                         } else {
                             values.put("flag", 0);
                         }
-                        values.put("name", value.substring(0, value.indexOf("<br />")));
                         values.put("hour", i - 2);
                         values.put("weekday", j - 1);
                         value = value.substring(value.indexOf("<br />") + 6, value.length());

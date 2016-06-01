@@ -12,4 +12,5 @@
     <dimen name="style_button_widght">30dp</dimen>
     <dimen name="style_button_height">100dp</dimen>
     <dimen name="user_list_height">400dp</dimen>
+    <dimen name="icon_height">64dp</dimen>
 </resources>
