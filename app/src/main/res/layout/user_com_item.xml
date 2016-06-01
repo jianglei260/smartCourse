@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white" >
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
 
     <TextView
         android:id="@+id/user_com_text"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="hello"
-        android:textColor="@color/textColor" 
-        android:background="@drawable/avoscloud_feedback_user_reply_background"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="6"
+        android:background="@drawable/avoscloud_feedback_user_reply_background"
+        android:text="hello"
+        android:textColor="@color/textColor" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"/>
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>

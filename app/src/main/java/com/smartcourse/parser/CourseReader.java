@@ -43,6 +43,7 @@ public class CourseReader {
                     int classRoomCol = c.getColumnIndex("classRoom");
                     int hourCol = c.getColumnIndex("hour");
                     int flagCol = c.getColumnIndex("flag");
+                    int id = c.getColumnIndex("_id");
                     courseItem.setClassRoom(c.getString(classRoomCol));
                     String hour = String.valueOf(2 * (c.getInt(hourCol)) - 1) + String.valueOf(2 * (c.getInt(hourCol)));
                     courseItem.setHour(hour);
@@ -52,6 +53,7 @@ public class CourseReader {
                     courseItem.setTeacher(c.getString(teacherCol));
                     courseItem.setWeekday(c.getInt(weekdayCol));
                     courseItem.setFlag(c.getInt(flagCol));
+                    courseItem.setId(c.getInt(id));
                     courseList.add(courseItem);
                 }
             }

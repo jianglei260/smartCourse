@@ -4,6 +4,7 @@ import java.io.File;
 
 import com.example.smartcourse.AppManager;
 import com.example.smartcourse.MyApplication;
+import com.smartcourse.bean.CourseItem;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
@@ -60,6 +61,11 @@ public class DBHelper extends SQLiteOpenHelper {
         if (db == null)
             db = getWritableDatabase();
         db.delete(tbName, "_id=?", new String[]{String.valueOf(id)});
+    }
+
+    public void updateCourse(ContentValues values) {
+        db = getWritableDatabase();
+        db.update(COURSE_TBL_NAME, values, "_id=", new String[]{String.valueOf(values.getAsInteger("id"))});
     }
 
     public void close() {

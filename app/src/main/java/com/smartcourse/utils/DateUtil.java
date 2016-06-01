@@ -11,69 +11,78 @@ import android.content.SharedPreferences;
 import android.util.Log;
 import android.widget.Toast;
 
-public class DateUtil
-{
-	private String url = "http://jwc.cuit.edu.cn/";
-	private String startChar = "第<span style=\"font-size:20pt;color:#FF0000\">";
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
 
-	public int getWeek(Context context)
-	{
-		SharedPreferences sharedPreferences = context.getSharedPreferences("date", Context.MODE_PRIVATE);
-		int diffWeek = getdiffWeek(context);
-		Calendar calendar = Calendar.getInstance();
-		int normalWeek = calendar.get(Calendar.WEEK_OF_YEAR);
-		if (diffWeek > 0)
-		{
-			return normalWeek - diffWeek;
-		}
-		return -1;
-	}
+public class DateUtil {
+    private String url = "http://jwc.cuit.edu.cn/";
 
-	public int getdiffWeek(Context context)
-	{
-		SharedPreferences sharedPreferences = context.getSharedPreferences("date", Context.MODE_PRIVATE);
-		if (sharedPreferences.getBoolean("catched", false) == false)
-		{
-			getWeekFromInternet(context);
-			return -1;
-		}
-		return sharedPreferences.getInt("diffWeek", -1);
-	}
+    public int getWeek(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("date", Context.MODE_PRIVATE);
+        int diffWeek = getdiffWeek(context);
+        Calendar calendar = Calendar.getInstance();
+        int normalWeek = calendar.get(Calendar.WEEK_OF_YEAR);
+        if (diffWeek > 0) {
+            return normalWeek - diffWeek;
 
-	public void setWeek(int week, Context context)
-	{
-		SharedPreferences sharedPreferences = context.getSharedPreferences("date", Context.MODE_PRIVATE);
-		sharedPreferences.edit().putInt("week", week).commit();
-		Calendar calendar = Calendar.getInstance();
-		int normalWeek = calendar.get(Calendar.WEEK_OF_YEAR);
-		sharedPreferences.edit().putBoolean("catched", true).commit();
-		sharedPreferences.edit().putInt("normalWeek", normalWeek).commit();
-		sharedPreferences.edit().putInt("diffWeek", normalWeek - week).commit();
-	}
+        }
+        return -1;
+    }
 
-	public void getWeekFromInternet(final Context context)
-	{
-		HttpRequestTask httpRequestTask = new HttpRequestTask(url, new HttpTaskListenner()
-		{
+    public int getdiffWeek(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("date", Context.MODE_PRIVATE);
+        if (Calendar.getInstance().get(Calendar.MONTH) > 9) {
+            getWeekFromInternet(context);
+            return -1;
+        }
 
-			@Override
-			public void onSuccess(String result)
-			{
-				// TODO Auto-generated method stub
-				int start = result.indexOf(startChar) + startChar.length();
-				String week = result.substring(start, start + 2);
-				Log.d("week", result);
-				setWeek(Integer.valueOf(week), context);
-			}
+        if (sharedPreferences.getBoolean("catched", false) == false) {
+            getWeekFromInternet(context);
+            return -1;
+        }
+        return sharedPreferences.getInt("configWeek", 0) - sharedPreferences.getInt("schoolWeek", 0);
+    }
 
-			@Override
-			public void onFailed()
-			{
-				// TODO Auto-generated method stub
-				Log.d("week", "error");
-				Toast.makeText(context, "获取星期数失败", Toast.LENGTH_SHORT);
-			}
-		});
-		HttpRequestManager.request(httpRequestTask);
-	}
+    public void setWeek(int week, Context context, boolean config) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences("date", Context.MODE_PRIVATE);
+        sharedPreferences.edit().putInt("week", week).commit();
+        Calendar calendar = Calendar.getInstance();
+        int normalWeek = calendar.get(Calendar.WEEK_OF_YEAR);
+        sharedPreferences.edit().putBoolean("catched", config).commit();
+        sharedPreferences.edit().putInt("configWeek", normalWeek).commit();
+        sharedPreferences.edit().putInt("schoolWeek", week).commit();
+    }
+
+    public void getWeekFromInternet(final Context context) {
+        HttpRequestTask httpRequestTask = new HttpRequestTask(url, new HttpTaskListenner() {
+
+            @Override
+            public void onSuccess(String result) {
+                // TODO Auto-generated method stub
+                Document document = Jsoup.parse(result);
+                Element element = document.getElementById("date_head");
+                Element href = element.getAllElements().first();
+                String text = href.text();
+                String week = text.substring(text.indexOf("第") + 1, text.indexOf("周", 3));
+                Log.d("week", week);
+                int weekNumber = 0;
+                try {
+                    weekNumber = Integer.valueOf(week);
+                } catch (Exception e) {
+                    weekNumber = 0;
+                }
+
+                setWeek(weekNumber, context, weekNumber == 0 ? false : true);
+            }
+
+            @Override
+            public void onFailed() {
+                // TODO Auto-generated method stub
+                Log.d("week", "error");
+                Toast.makeText(context, "获取星期数失败", Toast.LENGTH_SHORT);
+            }
+        });
+        HttpRequestManager.request(httpRequestTask);
+    }
 }

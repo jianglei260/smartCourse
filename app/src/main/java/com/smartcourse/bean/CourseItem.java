@@ -2,6 +2,7 @@ package com.smartcourse.bean;
 
 public class CourseItem
 {
+	private int id;
 	private String name;// 课程名
 	private String teacher;// 教师
 	private String classRoom;// 教室编号
@@ -33,6 +34,14 @@ public class CourseItem
 		this.endWeek = endWeek;
 		this.weekday = weekday;
 		this.flag = flag;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public CourseItem()
